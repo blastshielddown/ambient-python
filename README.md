@@ -1,66 +1,97 @@
 # Ambient Python
 
-An ambient audio generator that creates the sound of wind chimes being triggered by a varying breeze, using FM synthesis for rich, tubular bell sounds.
+A collection of ambient music generators using Python and SignalFlow for real-time audio synthesis.
 
-## Features
+## Overview
 
-- **FM-synthesized tubular bells** with metallic, resonant timbres
-- **Wind-driven triggering system** that responds to dynamic wind patterns
-- **Stereo positioning** with bells arranged from low (left) to high (right) frequencies
-- **Adjacent bell harmonies** - bells next to each other sometimes ring together
-- **Dynamic velocity range** for natural-sounding strikes
-- **3-minute ambient compositions** with automatic WAV export
+This repository contains multiple ambient music compositions that generate evolving soundscapes through algorithmic synthesis. Each piece uses different synthesis techniques to create immersive, meditative audio experiences with unique characteristics and moods.
 
 ## Requirements
 
 - Python 3.7+
-- signalflow library
-- scipy
-- numpy
+- SignalFlow audio library
+- NumPy
+- SciPy (for WAV export functionality)
 
-## Installation
-
-1. Install the required dependencies:
+Install dependencies:
 ```bash
-pip install -r requirements.txt
+pip install signalflow numpy scipy
 ```
 
-2. Run the ambient generator:
+## Compositions
+
+### FM Dorian Ambient (Featured)
+**`fm_dorian_ambient.py`** - A sophisticated 3-minute ambient piece featuring:
+- C Dorian mode chord progressions with random 7th extensions
+- FM synthesis electric keyboard with saw wave harmonics
+- 24-tap cascading delay system creating lush echo trails
+- Continuous C2 drone with auto-retriggering
+- Ethereal shimmer layer with ultra-slow LFO modulation
+- Random chord timing offsets (0-0.5 seconds) for organic feel
+- Comprehensive spatial reverb effects
+
+**WAV Export Version:** `fm_dorian_ambient_export.py` - Silent recording version that exports to WAV file
+
+Run live:
+```bash
+python fm_dorian_ambient.py
+```
+
+Export to WAV:
+```bash
+python fm_dorian_ambient_export.py
+```
+
+### Multi-Channel Ambient Soundscape
+**`ambient_multichannel.py`** - A layered ambient composition featuring:
+- Deep drones positioned across stereo field
+- Evolving pad layers with filter modulation
+- Textural noise elements for movement
+- Sparse bell-like tones with dramatic panning
+- Spatial positioning with dynamic movement
+- Auto-exports to WAV after performance
+
+Run:
+```bash
+python ambient_multichannel.py
+```
+
+### FM Wind Chime Ambient
+**`fm_windchime_ambient.py`** - The original wind chime piece featuring:
+- Multiple wind chime voices with random timing
+- FM synthesis bell tones
+- Spatial positioning across stereo field
+- Evolving harmonic progressions
+- Natural decay and resonance
+
+Run:
 ```bash
 python fm_windchime_ambient.py
 ```
 
-The script will:
-- Generate a 3-minute ambient wind chime composition
-- Play it in real-time through your speakers
-- Automatically export it as `fm_windchime_ambient_3min.wav`
+### Additional Examples
+The repository also includes various synthesis examples and building blocks:
+- `lydian_piano.py` - Piano composition in Lydian mode
+- `fm_synth_demo.py` - FM synthesis demonstration
+- `sound_generator.py` - Basic synthesis examples
 
-## How It Works
+## Features
 
-### Bell Synthesis
-Each bell is created using FM synthesis with:
-- A 3.5x frequency modulator for metallic character
-- Multiple harmonics for richness
-- Individual stereo positioning
-- Velocity-sensitive brightness
+- **Real-time audio synthesis** using SignalFlow
+- **Algorithmic composition** with generative elements
+- **Spatial audio positioning** and stereo effects
+- **Professional delay and reverb processing**
+- **WAV export capabilities** for high-quality recordings
+- **Multiple synthesis techniques** (FM, subtractive, additive)
+- **Unique performances** each time due to randomization
 
-### Wind System
-The wind system controls:
-- **Timing**: Stronger wind = more frequent chime strikes
-- **Velocity**: Wind strength affects how loud each strike is
-- **Grouping**: Adjacent bells can ring together in stronger wind
-- **Harmonies**: Occasional harmonic intervals (3rds, 5ths)
+## Usage Tips
 
-### Stereo Arrangement
-Bells are positioned across the stereo field by pitch:
-- **Left**: Lower frequencies (A3, B3, D4)
-- **Center**: Mid frequencies (E4, G4)  
-- **Right**: Higher frequencies (A4, B4, D5, E5)
-
-## Generated Files
-
-- `fm_windchime_ambient_3min.wav` - The generated ambient composition
+- Use headphones or good monitors for the best spatial experience
+- Each piece generates unique variations on every run
+- Export versions create WAV files for sharing or further processing
+- Adjust volume appropriately as pieces build in intensity
 
 ## License
 
-MIT License - Feel free to use and modify for your projects!
+This project is open source and available under the MIT License.
