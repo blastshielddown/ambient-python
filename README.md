@@ -1,4 +1,4 @@
-# FM Wind Chime Ambient
+# Ambient Python
 
 An ambient audio generator that creates the sound of wind chimes being triggered by a varying breeze, using FM synthesis for rich, tubular bell sounds.
 
